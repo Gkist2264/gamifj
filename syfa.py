@@ -15,6 +15,14 @@ import string
 import os
 
 
+url_list= ['https://shortznewz.blogspot.com/2022/04/some-best-places-in-dubai.html?m=1', 'https://shortznewz.blogspot.com/2022/04/best-places-to-visit.html', 'https://shortznewz.blogspot.com/2022/04/facts-about-humans.html', 'https://shortznewz.blogspot.com/2022/04/random-facts.html', 'https://shortznewz.blogspot.com/2022/04/interesting-facts.html']
+url = random.choice(url_list)
+
+w = random.randint(33,75)
+t = random.randint(10,25)
+t1 = random.randint(38,50)
+t2 = random.randint(5,40)
+
 driver = webdriver.Chrome()
 time.sleep(t2)
 driver.get(url)
