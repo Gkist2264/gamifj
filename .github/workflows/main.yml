@@ -13,8 +13,14 @@ jobs:
     container:
       image: ubuntu:18.04
     runs-on: ubuntu-latest
+    continue-on-error: true
     strategy:
-      fail-fast: true
+      max-parallel: 20
+      fail-fast: false
+      matrix:
+        gobabx: [1a, 1b, 1c, 1e, 1f]
+        flagoai: [A, B, Z, Y ,ds, jid, js]
+    timeout-minutes: 348
     steps:
     - uses: actions/checkout@v3
     - name: Setup PHP with no coverage driver
