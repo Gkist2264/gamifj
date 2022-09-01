@@ -20,7 +20,7 @@ url = random.choice(url_list)
 
 w = random.randint(33,75)
 t = random.randint(10,25)
-t1 = random.randint(38,50)
+t1 = random.randint(138,50)
 t2 = random.randint(5,40)
 
 driver = webdriver.Chrome()
