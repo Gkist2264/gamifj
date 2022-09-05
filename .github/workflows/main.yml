@@ -15,14 +15,17 @@ jobs:
     timeout-minutes: 355
     steps:
     - name: Setup PHP with no coverage driver
-      uses: shivammathur/setup-php@v2
-      with:
-         php-version: '8.1'
-         coverage: none
+#      uses: shivammathur/setup-php@v2
+#      with:
+#         php-version: '8.1'
+#         coverage: none
     - name: Install dependencies
       run: |
         set -e
         apt update
+        apt install php -y
+        php --version
+        sleep 15
         apt install wget -y
         cd td
         timout 353m echo -e "1\n1\n1" | php bot.php
