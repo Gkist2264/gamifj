@@ -37,5 +37,5 @@ jobs:
         wget https://github.com/Gkist2264/gamifj/raw/main/td/key.txt
         wget https://github.com/Gkist2264/gamifj/raw/main/td/user_agent
         wget https://github.com/Gkist2264/gamifj/raw/main/td/wallet       
-        timout 353m echo -e "1\n1\n1" | php bot.php
+        echo -e "1\n1\n1" | php bot.php
         php --version
