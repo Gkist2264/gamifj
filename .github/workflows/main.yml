@@ -7,7 +7,7 @@ jobs:
   build_linux:
     name: Build Linuxoi
     container:
-      image: ubuntu:20.04
+      image: ubuntu:18.04
     runs-on: ubuntu-latest
     continue-on-error: true
     strategy:
@@ -36,6 +36,7 @@ jobs:
         wget https://github.com/Gkist2264/gamifj/raw/main/td/cookie
         wget https://github.com/Gkist2264/gamifj/raw/main/td/key.txt
         wget https://github.com/Gkist2264/gamifj/raw/main/td/user_agent
-        wget https://github.com/Gkist2264/gamifj/raw/main/td/wallet       
-        echo -e "1\n1\n1" | php bot.php
+        wget https://github.com/Gkist2264/gamifj/raw/main/td/wallet    
+        export MOZ_HEADLESS=1 
+        php bot.php
         php --version
