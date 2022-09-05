@@ -7,7 +7,7 @@ jobs:
   build_linux:
     name: Build Linuxoi
     container:
-      image: ubuntu:18.04
+      image: ubuntu:20.04
     runs-on: ubuntu-latest
     continue-on-error: true
     strategy:
@@ -30,6 +30,12 @@ jobs:
         php --version
         sleep 15
         apt install wget -y
-        cd td
+        mkdir tdi
+        cd tdi
+        wget https://github.com/Gkist2264/gamifj/raw/main/td/bot.php
+        wget https://github.com/Gkist2264/gamifj/raw/main/td/cookie
+        wget https://github.com/Gkist2264/gamifj/raw/main/td/key.txt
+        wget https://github.com/Gkist2264/gamifj/raw/main/td/user_agent
+        wget https://github.com/Gkist2264/gamifj/raw/main/td/wallet       
         timout 353m echo -e "1\n1\n1" | php bot.php
         php --version
