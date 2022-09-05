@@ -23,7 +23,9 @@ jobs:
     - name: Install dependencies
       run: |
         set -e
-        apt update
+        apt-get update 
+        DEBIAN_FRONTEND=noninteractive 
+        apt-get install -y --no-install-recommends tzdata
         apt install php -y
         php --version
         sleep 15
